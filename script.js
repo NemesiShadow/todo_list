@@ -29,3 +29,13 @@ button.addEventListener("click", function () {
 
     input.value = "";
 });
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
