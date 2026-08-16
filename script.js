@@ -12,10 +12,15 @@ button.addEventListener("click", function () {
     const task = document.createElement("li");
     task.textContent = taskText;
 
+    task.addEventListener("click", function () {
+        task.classList.toggle("completed");
+    });
+
     const deleteButton = document.createElement("button");
     deleteButton.textContent = "Supprimer";
 
-    deleteButton.addEventListener("click", function () {
+    deleteButton.addEventListener("click", function (event) {
+        event.stopPropagation();
         task.remove();
     });
 
